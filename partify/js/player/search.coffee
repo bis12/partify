@@ -46,6 +46,12 @@ class Search
             this.processSearch title, artist, album
             return false
 
+        $("#clear_search").button()
+        $("#clear_search").click (e) =>
+            $("input#search_title").val("")
+            $("input#search_artist").val("")
+            $("input#search_album").val("")
+
     initializeSortHandlers: () ->
         for category in ['title', 'artist', 'album']
             do (category) =>
